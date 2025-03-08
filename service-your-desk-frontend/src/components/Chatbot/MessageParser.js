@@ -20,7 +20,6 @@ class MessageParser {
 
   fetchServiceIssues = async (serviceName) => {
     try {
-      console.log("Fetching issues for service:", serviceName);
       const response = await axios.get(`http://localhost:8080/api/service-issues/issues/${serviceName}`);
 
       if (response.data.length > 0) {

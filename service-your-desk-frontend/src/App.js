@@ -17,14 +17,16 @@ function App() {
     <Router>
       <div className="App">
         <Navigation />
-        <Routes>
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/" element={<ProtectedRoute element={<><Header /><Services /></>} />} />
-          <Route path="/services" element={<ProtectedRoute element={<Services />} />} />
-          <Route path="/service/:serviceName" element={<ProtectedRoute element={<ServiceProviders />} />} />
-          <Route path="/provider/:providerId" element={<ProtectedRoute element={<ServiceProviderDetails />} />} />
-          <Route path="/bookings" element={<ProtectedRoute element={<Bookings />} />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/" element={<ProtectedRoute element={<><Header /><Services /></>} />} />
+            <Route path="/services" element={<ProtectedRoute element={<Services />} />} />
+            <Route path="/service/:serviceName" element={<ProtectedRoute element={<ServiceProviders />} />} />
+            <Route path="/provider/:providerId" element={<ProtectedRoute element={<ServiceProviderDetails />} />} />
+            <Route path="/bookings" element={<ProtectedRoute element={<Bookings />} />} />
+          </Routes>
+        </div>
         <Footer />
         <ChatbotComponent /> 
       </div>
