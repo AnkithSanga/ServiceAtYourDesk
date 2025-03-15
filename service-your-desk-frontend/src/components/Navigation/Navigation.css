@@ -37,4 +37,93 @@
     cursor: pointer;
     margin-left: 1rem;
   }
-  
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link {
+  color: #ffffff;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #bbbbbb;
+}
+
+body.dark-mode .button-primary {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+body.dark-mode .button-primary:hover {
+  background-color: #555555;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  margin-right: 20px;
+}
+
+.dark-mode-toggle:hover {
+  color: #555;
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  color: #bbbbbb;
+}
+
+.dark-mode .navigation {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .nav-left a {
+  color: white;
+}
+
+.dark-mode .dark-mode-toggle {
+  color: white;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  color: #ccc;
+}

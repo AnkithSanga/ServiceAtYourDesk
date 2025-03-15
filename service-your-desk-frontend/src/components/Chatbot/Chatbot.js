@@ -102,11 +102,11 @@ const ChatbotComponent = () => {
   const getGreeting = () => {
     const currentHour = new Date().getHours();
     if (currentHour < 12) {
-      return { greeting: "Good Morning", icon: <FaSun /> };
+      return { greeting: "Good Morning", icon: <FaSun style={{ color: "orange" }} /> };
     } else if (currentHour < 18) {
-      return { greeting: "Good Afternoon", icon: <FaCloudSun /> };
+      return { greeting: "Good Afternoon", icon: <FaCloudSun style={{ color: "yellow" }} /> };
     } else {
-      return { greeting: "Good Evening", icon: <FaCloudMoon /> };
+      return { greeting: "Good Evening", icon: <FaCloudMoon style={{ color: "blue" }} /> };
     }
   };
 
@@ -121,7 +121,7 @@ const ChatbotComponent = () => {
 
       {/* Chatbot UI */}
       {showChat && (
-        <div className="chatbot-container">
+        <div className="chatbot-container animate__animated animate__zoomIn">
           <div className="chatbot-header">
             <h2>{config.botName}</h2>
             <button className="close-btn" onClick={() => setShowChat(false)}>
@@ -132,7 +132,7 @@ const ChatbotComponent = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`chatbot-message ${msg.sender}`}
+                className={`chatbot-message ${msg.sender} animate__animated animate__fadeIn`}
                 onClick={msg.isClickable ? () => handleIssueClick(msg.text) : undefined}
                 style={{ cursor: msg.isClickable ? "pointer" : "default" }}
               >
